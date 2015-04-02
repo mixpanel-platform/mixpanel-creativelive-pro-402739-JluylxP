@@ -49,8 +49,8 @@
             });
           }
           
-          if (eventName){
-            MP.api.segment(eventName, "Company Name", params).done(function(results) {
+          if (eventName && !propName){
+            MP.api.segment(eventName, "courseNIDs", params).done(function(results) {
               data = results.values();
               eventGraph.MPChart('setData', data);
               eventTable.MPTable('setData', data);
