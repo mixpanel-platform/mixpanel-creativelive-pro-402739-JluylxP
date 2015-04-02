@@ -32,9 +32,10 @@
           'from': '2015-01-01'
         }
         
+        var eventName = "Completed Order";
+        propSelect.MPPropertySelect('setEvent', eventName);
+        
         var runQuery = function() {
-          var eventName = "Completed Order";
-          propSelect.MPPropertySelect('setEvent', eventName);
           var propName  = propSelect.MPPropertySelect('value');
           var dateRange = dateSelect.MPDatepicker('value');
               
