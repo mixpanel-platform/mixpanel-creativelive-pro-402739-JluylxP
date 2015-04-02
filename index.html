@@ -28,7 +28,7 @@
         });
         
         params = {
-          'where': '(1126 in properties["courseNIDs"])',
+          'where': '(6064 in properties["courseNIDs"])',
           'to': '2015-01-01',
           'from': '2015-01-01'
         }
@@ -43,14 +43,6 @@
           
           if (eventName && propName) {
             MP.api.segment(eventName, propName, params).done(function(results) {
-              data = results.values();
-              eventGraph.MPChart('setData', data);
-              eventTable.MPTable('setData', data);
-            });
-          }
-          
-          if (eventName && !propName){
-            MP.api.segment(eventName, "courseNIDs", params).done(function(results) {
               data = results.values();
               eventGraph.MPChart('setData', data);
               eventTable.MPTable('setData', data);
